@@ -3653,17 +3653,17 @@ var Data = /*#__PURE__*/function (_Commands) {
   }
 
   /**
-   * Function getHTTPMethod().
+   * Function gethttpsMethod().
    *
-   * Returns HTTP Method by type.
+   * Returns https Method by type.
    *
    * @param {DataTypes} type
    *
-   * @return {string|boolean} HTTP Method
+   * @return {string|boolean} https Method
    */
   (0, _createClass2.default)(Data, [{
-    key: "getHTTPMethod",
-    value: function getHTTPMethod(type) {
+    key: "gethttpsMethod",
+    value: function gethttpsMethod(type) {
       switch (type) {
         case 'create':
           return 'POST';
@@ -3682,11 +3682,11 @@ var Data = /*#__PURE__*/function (_Commands) {
     /**
      * Function getAllowedMethods().
      *
-     * Returns allowed HTTP methods by type.
+     * Returns allowed https methods by type.
      *
      * @param {DataTypes} type
      *
-     * @return {[string]|boolean} allowed HTTP methods
+     * @return {[string]|boolean} allowed https methods
      */
   }, {
     key: "getAllowedMethods",
@@ -3905,11 +3905,11 @@ var Data = /*#__PURE__*/function (_Commands) {
 
       /**
        * Translate:
-       * 'create, delete, get, update' to HTTP Methods:
+       * 'create, delete, get, update' to https Methods:
        * 'GET, POST, PUT, PATCH, DELETE'
        */
       var allowedMethods = this.getAllowedMethods(type),
-        method = this.getHTTPMethod(type);
+        method = this.gethttpsMethod(type);
       if ('GET' === method) {
         Object.assign(params, {
           headers: headers
@@ -4679,8 +4679,8 @@ var BaseError = /*#__PURE__*/function (_Error) {
      * Returns the status code of the error.
      */
   }, {
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       (0, _forceMethodImplementation.default)();
     }
   }]);
@@ -4720,8 +4720,8 @@ var DefaultError = /*#__PURE__*/function (_BaseError) {
     return _super.apply(this, arguments);
   }
   (0, _createClass2.default)(DefaultError, null, [{
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       return 501;
     }
   }]);
@@ -4769,8 +4769,8 @@ var Error404 = /*#__PURE__*/function (_BaseError) {
       _console.default.warn(this.message);
     }
   }], [{
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       return 404;
     }
   }]);
@@ -7542,9 +7542,9 @@ var CommandData = /*#__PURE__*/function (_CommandBase) {
     value: function onCatchApply(e) {
       var _e, _e$data;
       // TODO: If the errors that returns from the server is consistent remove the '?' from 'e'
-      var httpErrorCode = ((_e = e) === null || _e === void 0 ? void 0 : (_e$data = _e.data) === null || _e$data === void 0 ? void 0 : _e$data.status) || 501;
+      var httpsErrorCode = ((_e = e) === null || _e === void 0 ? void 0 : (_e$data = _e.data) === null || _e$data === void 0 ? void 0 : _e$data.status) || 501;
       var dataError = Object.values(errors).find(function (error) {
-        return error.getHTTPErrorCode() === httpErrorCode;
+        return error.gethttpsErrorCode() === httpsErrorCode;
       });
       if (!dataError) {
         dataError = errors.DefaultError;

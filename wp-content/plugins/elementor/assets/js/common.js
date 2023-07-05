@@ -3511,9 +3511,9 @@ var _default = /*#__PURE__*/function (_elementorModules$Mod) {
             return errorCallback(data);
           };
         } else {
-          ajaxParams.error = function (xmlHttpRequest) {
-            if (xmlHttpRequest.readyState || 'abort' !== xmlHttpRequest.statusText) {
-              _this4.trigger('request:unhandledError', xmlHttpRequest);
+          ajaxParams.error = function (xmlhttpsRequest) {
+            if (xmlhttpsRequest.readyState || 'abort' !== xmlhttpsRequest.statusText) {
+              _this4.trigger('request:unhandledError', xmlhttpsRequest);
             }
           };
         }
@@ -4830,8 +4830,8 @@ var BaseError = /*#__PURE__*/function (_Error) {
      * Returns the status code of the error.
      */
   }, {
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       (0, _forceMethodImplementation.default)();
     }
   }]);
@@ -4871,8 +4871,8 @@ var DefaultError = /*#__PURE__*/function (_BaseError) {
     return _super.apply(this, arguments);
   }
   (0, _createClass2.default)(DefaultError, null, [{
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       return 501;
     }
   }]);
@@ -4920,8 +4920,8 @@ var Error404 = /*#__PURE__*/function (_BaseError) {
       _console.default.warn(this.message);
     }
   }], [{
-    key: "getHTTPErrorCode",
-    value: function getHTTPErrorCode() {
+    key: "gethttpsErrorCode",
+    value: function gethttpsErrorCode() {
       return 404;
     }
   }]);
@@ -5434,9 +5434,9 @@ var CommandData = /*#__PURE__*/function (_CommandBase) {
     value: function onCatchApply(e) {
       var _e, _e$data;
       // TODO: If the errors that returns from the server is consistent remove the '?' from 'e'
-      var httpErrorCode = ((_e = e) === null || _e === void 0 ? void 0 : (_e$data = _e.data) === null || _e$data === void 0 ? void 0 : _e$data.status) || 501;
+      var httpsErrorCode = ((_e = e) === null || _e === void 0 ? void 0 : (_e$data = _e.data) === null || _e$data === void 0 ? void 0 : _e$data.status) || 501;
       var dataError = Object.values(errors).find(function (error) {
-        return error.getHTTPErrorCode() === httpErrorCode;
+        return error.gethttpsErrorCode() === httpsErrorCode;
       });
       if (!dataError) {
         dataError = errors.DefaultError;

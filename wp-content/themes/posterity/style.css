@@ -3902,7 +3902,7 @@ img.avatar{
 }
 .bypostauthor > .comment-body .comment-author .fn::after{
 	content: "";
-	background: transparent url(images/author.png) 0 0 no-repeat;
+	background: transparent url(https://localhost/kktm-local/wp-content/themes/posterity/images/author.png) 0 0 no-repeat;
 	height: 23px;
 	width: 43px;
 	margin-left: 15px;
@@ -6133,7 +6133,7 @@ body.a13-body-sticky-one-page .content-limiter{
 			border-radius: 0 0 0 5px;
 }
 .demo-flyout.flyout-box .links{
-	background: #fff url(images/posterity.png) 50% 20px no-repeat;
+	background: #fff url(https://localhost/kktm-local/wp-content/themes/posterity/images/posterity.png) 50% 20px no-repeat;
 	padding-top: 54px;
 }
 
