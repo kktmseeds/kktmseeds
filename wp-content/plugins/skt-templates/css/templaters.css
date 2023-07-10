@@ -2496,13 +2496,13 @@ padding-bottom:10px !important; transition: 0.3s;}
 .taxi-app-button a { text-decoration:none; font-weight:500;}
 .taxi-app-button .elementor-image-box-description { margin-top:-5px !important;}
 .taxi-choice-section-phone .elementor-image-box-img img {background: #111111;height: 70px;width: 70px;padding: 18px;}
-.taxi-video-section .elementor-custom-embed-play:after {content: '';position: absolute;left: 50%;top: 50%;    z-index: 999;width: 55px;height: 55px;transform: translate(-50%,-50%); border-radius: 100%; background: #ffc000 url(https://localhost/kktm-local/wp-content/plugins/skt-templates/css/images/play-button-icon.png) center no-repeat;}
+.taxi-video-section .elementor-custom-embed-play:after {content: '';position: absolute;left: 50%;top: 50%;    z-index: 999;width: 55px;height: 55px;transform: translate(-50%,-50%); border-radius: 100%; background: #ffc000 url(images/play-button-icon.png) center no-repeat;}
 .taxi-video-section .eicon-play:before { display:none;}
 .taxi-testimonials-right-section {width:400px !important; float:left; margin-left:0px !important;}
 .taxi-testimonials-left-box .elementor-container {float:right !important; width:690px;}
 .taxi-choose-section .elementor-icon-list-text span { margin-left:30px;}
 .taxi-mobile-img { margin-left:-57px;}
-.taxi-testimonials-section::after {content:""; background:url(https://localhost/kktm-local/wp-content/plugins/skt-templates/css/images/testimonials-quotes-img.png) center no-repeat;; position:absolute; bottom:-85px; right:22px;width: 88px;height: 80px;}
+.taxi-testimonials-section::after {content:""; background:url(images/testimonials-quotes-img.png) center no-repeat;; position:absolute; bottom:-85px; right:22px;width: 88px;height: 80px;}
 .taxi-newsletter-right input[type="text"] {background: #fff !important;padding: 35px !important;border-radius: 10px !important;padding-right: 254px !important;width: 100% !important;max-width: 550px;height: inherit !important;}
 .taxi-newsletter-right input[type="submit"] {position: absolute;right: 20px;top: 12px;text-transform: uppercase;font-size: 17px;font-weight: 600;background: #ffcd00;color: #282828;border-radius: 8px;padding: 12px 40px;height: inherit; line-height:42px;}
 .taxi-newsletter-right input[type="submit"]:hover {background: #282828;color: #ffffff;}
